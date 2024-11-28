@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0;
@@ -47,10 +48,20 @@ body {
 }
 
 @media (max-width: 600px) {
+  .modal {
+    font-size: 11px;
+    align-items: center; /* Centra el contenido verticalmente */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para el modal */
+    z-index: 9999; /* Asegura que el modal esté por encima de otros elementos */
+  }
+
+.cont {
+  height: 20vh;
+}
   .car {
     left: 5%;
-    width: 30vw; /* Ajusta el tamaño según sea necesario */
-    top: vh; /* Ajusta la posición si es necesario */
+    width: 45vw; /* Ajusta el tamaño según sea necesario */
+    top: 20vh; /* Ajusta la posición si es necesario */
   }
 
   .motorbike {

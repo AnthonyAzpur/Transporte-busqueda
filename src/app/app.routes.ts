@@ -2,24 +2,17 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
     {
-        path: 'Buscar Placas',
+        path: 'BuscarPlacas',
     loadComponent: () => import('./buscar-placas/buscar-placas.component'),
-    children: [
-      {
-        path: 'Buscar Placas',
-        title: 'Buscar Placas',
-        loadComponent: () => import('./buscar-placas/buscar-placas.component')
-      }
-    ]
   },
     {
       path: '',
-      redirectTo:'/Buscar Placas',
+      redirectTo:'/BuscarPlacas',
       pathMatch:'full'
     },
     {
       path: '**',
-      redirectTo:'/Buscar Placas',
+      redirectTo:'/BuscarPlacas',
       pathMatch:'full'
     }
 
