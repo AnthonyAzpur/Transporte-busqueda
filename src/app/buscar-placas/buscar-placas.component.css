@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Definir una fuente general */
+}
+
+.background {
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  background: url(https://i.imgur.com/WK5SWWc.jpg) no-repeat center center;
+  background-size: cover; /* Hace que el fondo cubra todo el espacio sin distorsionarse */
+  background-attachment: fixed; /* Efecto parallax para fondo */
+  animation: driving 30s linear infinite;
+}
+
+.cont {
+  display: flex;
+  justify-content: flex-start; /* Alinea los elementos al principio */
+  align-items: center;
+  height: 40vh;
+  position: relative;
+  z-index: 10; /* Para asegurarse de que esté sobre el fondo */
+}
+
+.car {
+  position: absolute;
+  left: 2%;
+  top: 10vh;
+  width: 20vw;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, top 1s ease-in-out;
+  animation: showCar 1s forwards;
+  animation-delay: 1s;
+}
+
+.motorbike {
+  position: absolute;
+  left: 75%;
+  top: 10vh;
+  width: 20vw;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, top 1s ease-in-out;
+  animation: showMotorbike 1s forwards;
+  animation-delay: 1s;
+}
+
+@media (max-width: 600px) {
+  .car {
+    left: 5%;
+    width: 30vw; /* Ajusta el tamaño según sea necesario */
+    top: vh; /* Ajusta la posición si es necesario */
+  }
+
+  .motorbike {
+    left: 50%;
+    width: 40vw;/* Ajusta el tamaño según sea necesario */
+    top: 20vh; /* Ajusta la posición si es necesario */
+  }
+}
+
+
+/* Media query para pantallas grandes (por ejemplo, escritorio) */
+@media (min-width: 1200px) {
+  .car {
+    left: 1%;
+    width: 13vw;
+    top: 5vh;
+  }
+
+  .motorbike {
+    left: 80%;
+    width: 14vw;
+    top: 5vh;
+  }
+}
+
+
+.logo2 {
+  width: 150px;
+  height: 120px;
+  margin: 10px;
+  border-radius: 10%;
+}
+/* modal */
+.modal {
+  position: fixed; /* Asegura que el modal se fije en la pantalla */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex; /* Utiliza flexbox para alinear los elementos dentro */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para el modal */
+  z-index: 9999; /* Asegura que el modal esté por encima de otros elementos */
+}
+
+
+/* Animaciones */
+@keyframes driving {
+  from { background-position: bottom left; }
+  to { background-position: bottom right; }
+}
+@keyframes showCar {
+  to {
+    opacity: 1;
+    visibility: visible;
+    top: 70vh; /* Usar porcentaje del viewport en lugar de px */
+  }
+}
+
+@keyframes showMotorbike {
+  to {
+    opacity: 1;
+    visibility: visible;
+    top: 77vh; /* Usar porcentaje del viewport en lugar de px */
+  }
+
+}
