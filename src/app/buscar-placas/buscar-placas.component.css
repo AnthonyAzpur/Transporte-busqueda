@@ -2,25 +2,25 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif; /* Definir una fuente general */
+  font-family: Arial, sans-serif;
 }
 
 .background {
-  height: 100vh; /* Ocupa toda la altura de la ventana */
-  width: 100%; /* Asegura que ocupe todo el ancho */
+  height: 100vh;
+  width: 100%;
   background: url(https://i.imgur.com/WK5SWWc.jpg) no-repeat center center;
-  background-size: cover; /* Hace que el fondo cubra todo el espacio sin distorsionarse */
-  background-attachment: fixed; /* Efecto parallax para fondo */
+  background-size: cover;
+  background-attachment: fixed;
   animation: driving 40s linear infinite;
 }
 
 .cont {
   display: flex;
-  justify-content: flex-start; /* Alinea los elementos al principio */
+  justify-content: flex-start;
   align-items: center;
   height: 40vh;
   position: relative;
-  z-index: 10; /* Para asegurarse de que esté sobre el fondo */
+  z-index: 10;
 }
 
 .car {
@@ -50,9 +50,9 @@ body {
 @media (max-width: 600px) {
   .modal {
     font-size: 11px;
-    align-items: center; /* Centra el contenido verticalmente */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para el modal */
-    z-index: 9999; /* Asegura que el modal esté por encima de otros elementos */
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
   }
 
 .cont {
@@ -60,19 +60,18 @@ body {
 }
   .car {
     left: 5%;
-    width: 45vw; /* Ajusta el tamaño según sea necesario */
-    top: 20vh; /* Ajusta la posición si es necesario */
+    width: 45vw;
+    top: 20vh;
   }
 
   .motorbike {
     left: 50%;
-    width: 40vw;/* Ajusta el tamaño según sea necesario */
-    top: 20vh; /* Ajusta la posición si es necesario */
+    width: 40vw;
+    top: 20vh;
   }
 }
 
 
-/* Media query para pantallas grandes (por ejemplo, escritorio) */
 @media (min-width: 1200px) {
   .car {
     left: 1%;
@@ -92,16 +91,16 @@ body {
 }
 /* modal */
 .modal {
-  position: fixed; /* Asegura que el modal se fije en la pantalla */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  display: flex; /* Utiliza flexbox para alinear los elementos dentro */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para el modal */
-  z-index: 9999; /* Asegura que el modal esté por encima de otros elementos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
 }
 
 
@@ -114,7 +113,7 @@ body {
   to {
     opacity: 1;
     visibility: visible;
-    top: 70vh; /* Usar porcentaje del viewport en lugar de px */
+    top: 70vh;
   }
 }
 
@@ -122,7 +121,7 @@ body {
   to {
     opacity: 1;
     visibility: visible;
-    top: 77vh; /* Usar porcentaje del viewport en lugar de px */
+    top: 77vh;
   }
 
 }
@@ -136,25 +135,25 @@ body {
   border: 3px solid black;
 }
 .placa p{
-  font-weight: bold;  /* Negrita */
+  font-weight: bold;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.1rem;
 }
 .inputplaca {
-  width: 100%;  /* Ancho de 100px */
+  width: 100%;
   height: 100%;
   font-size: 3rem;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
-  text-align: center;  /* Centra el texto dentro del input */
-  font-weight: bold;  /* Negrita */
-  text-transform: uppercase;  /* Convierte el texto en mayúsculas */
-  color: black;  /* Texto negro */
-  background-color: #38bdf8;  /* Fondo celeste */
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  background-color: #38bdf8;
 }
 .inputplaca::placeholder {
-  color: #000000;  /* Color negro para el texto del placeholder */
+  color: #000000;  
   font-size: 1.5rem;
   font-weight: bold;
 }

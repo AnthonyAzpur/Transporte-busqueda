@@ -15,8 +15,6 @@ export default class BuscarPlacasComponent {
   placa: string = '';
   placaDatos: PlacaDatos | null = null;
   showModal: boolean = false;
-
-
   private apiUrl = 'https://webapp.mdsmp.gob.pe/viajesegurobackend/public/v1/sigta/consultarplaca';
 
   constructor(private http: HttpClient) {}
@@ -50,6 +48,6 @@ export default class BuscarPlacasComponent {
   toggleModal(): void {
     this.showModal = !this.showModal;
     this.showModal = false;
-   
+
   }
 }
