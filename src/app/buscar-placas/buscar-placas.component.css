@@ -10,7 +10,7 @@ body {
   background: url(https://i.imgur.com/WK5SWWc.jpg) no-repeat center center;
   background-size: cover; /* Hace que el fondo cubra todo el espacio sin distorsionarse */
   background-attachment: fixed; /* Efecto parallax para fondo */
-  animation: driving 30s linear infinite;
+  animation: driving 40s linear infinite;
 }
 
 .cont {
@@ -68,20 +68,16 @@ body {
     width: 13vw;
     top: 5vh;
   }
-
   .motorbike {
     left: 80%;
     width: 14vw;
     top: 5vh;
   }
 }
-
-
 .logo2 {
-  width: 150px;
+  width: 220px;
   height: 120px;
-  margin: 10px;
-  border-radius: 10%;
+  margin-left: 50px;
 }
 /* modal */
 .modal {
@@ -118,4 +114,36 @@ body {
     top: 77vh; /* Usar porcentaje del viewport en lugar de px */
   }
 
+}
+.placa{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 251, 0);
+  width: 250px;
+  height: 130px;
+  border-radius: 10px;
+  border: 3px solid black;
+}
+.placa p{
+  font-weight: bold;  /* Negrita */
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.inputplaca {
+  width: 100%;  /* Ancho de 100px */
+  height: 100%;
+  font-size: 3rem;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  text-align: center;  /* Centra el texto dentro del input */
+  font-weight: bold;  /* Negrita */
+  text-transform: uppercase;  /* Convierte el texto en mayúsculas */
+  color: black;  /* Texto negro */
+  background-color: #38bdf8;  /* Fondo celeste */
+}
+.inputplaca::placeholder {
+  color: #000000;  /* Color negro para el texto del placeholder */
+  font-size: 1.5rem;
+  font-weight: bold;
 }
