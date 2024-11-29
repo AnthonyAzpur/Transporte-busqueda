@@ -15,6 +15,7 @@ export default class BuscarPlacasComponent {
   placa: string = '';
   placaDatos: PlacaDatos | null = null;
   showModal: boolean = false;
+  isLoading: boolean = false;
   private apiUrl = 'https://webapp.mdsmp.gob.pe/viajesegurobackend/public/v1/sigta/consultarplaca';
 
   constructor(private http: HttpClient) {}
@@ -24,7 +25,7 @@ export default class BuscarPlacasComponent {
     if (!this.placa) {
       return;
     }
-
+    this.isLoading = true;
     const body = { placa: this.placa };
 
     this.http.post<PlacaDatos[]>(this.apiUrl, body).subscribe({
@@ -34,11 +35,13 @@ export default class BuscarPlacasComponent {
         } else {
           this.placaDatos = null;
         }
+        this.isLoading = false;
         this.showModal = true;
       },
       error: (err) => {
         console.error('Error al obtener los datos:', err);
         this.placaDatos = null;
+        this.isLoading = false;
         this.showModal = true;
 
       },
