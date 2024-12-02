@@ -2,17 +2,18 @@ export interface PlacaDatos {
   id:                      string;
   idEmpresa:               string;
   nomEmpresaTransporte:    string;
-  representanteTransporte: null;
+  representanteTransporte: string;
   zonatrabajo:             string;
   placa:                   string;
-  propietario:             null;
-  tipodocPropietario:      null;
-  docPropietario:          null;
+  propietario:             string;
+  tipodocPropietario:      string;
+  docPropietario:          string;
   conductor:               string;
-  dniConductor:            null;
-  licenciaConductor:       null;
+  dniConductor:            string;
+  licenciaConductor:       string;
   verAfiliado:             string;
   fechaCreacion:           Date;
-  usuarioCreacion:         null;
+  usuarioCreacion:         string;
   activo:                  string;
+  padron:                  string;
 }

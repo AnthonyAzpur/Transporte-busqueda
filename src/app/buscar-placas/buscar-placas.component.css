@@ -53,10 +53,19 @@ body {
   animation-delay: 1s;
 }
 
+.logo2 {
+  width: 220px;
+  height: 120px;
+  margin-left: 50px;
+}
+
 @media (max-width: 600px) {
   .cont{
     justify-content: center;
   }
+.logo2 {
+  margin-left: 0px;
+}
   .modal {
     font-size: 11px;
     align-items: center;
@@ -91,11 +100,6 @@ body {
     width: 14vw;
     top: 5vh;
   }
-}
-.logo2 {
-  width: 220px;
-  height: 120px;
-  margin-left: 50px;
 }
 /* modal */
 .modal {

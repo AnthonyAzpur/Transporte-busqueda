@@ -32,6 +32,11 @@ export default class BuscarPlacasComponent {
       next: (data) => {
         if (data && data.length > 0) {
           this.placaDatos = data[0];
+          // Validar si la actividad es 1 (activo)
+        if (this.placaDatos.activo == "0") {
+          this.placaDatos = null;  // Opcional: borrar los datos si la actividad no es activa
+        }
+
         } else {
           this.placaDatos = null;
         }
